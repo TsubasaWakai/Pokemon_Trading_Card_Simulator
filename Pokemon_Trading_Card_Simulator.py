@@ -91,13 +91,11 @@ def active_place_click(event):
 		if len(bench_pokemon_in) < 5 and types == "P":#バトル場にポケモンを出す
 			card_c = tag_del.replace('img', '')
 			types = hand_prce[int(card_c)].split('_')[1]
-			print(types)
 			if types == "0" and active_pokemon_in == 0:
 				canvas.delete(tag_del)
 				active_pokemon = hand[int(card_c)]
 				hand.pop(int(card_c))
 				hand_prce.pop(int(card_c))
-				print(active_pokemon)
 				canvas.unbind("<Motion>")
 				click_num = 0
 				canvas.create_image(400, 130, image=active_pokemon, tags="activ_pokemon")
@@ -123,7 +121,6 @@ def active_place_click(event):
 					canvas.unbind("<Motion>")
 					click_num = 0
 					hand_sort()
-					print(active_pokemon_en)
 				elif len(active_pokemon_en) > 0:
 					active_pokemon_en_count = 362
 					active_len.clear()
@@ -155,12 +152,10 @@ def active_place_click(event):
 def trainers():
 	global click_num, tag_del, active_pokemon_in, card_full_name
 	canvas.delete("g_su_st")
-	print(tag_del)
 	card_c = tag_del.replace('img', '')
 	card_full_name = hand_prce[int(card_c)]
 	types = hand_prce[int(card_c)].split('_')[-1].replace('.png', '')
 	trainers = hand[int(card_c)]
-	print(trainers)
 	canvas.create_image(550, 130, image=trainers, tag="g_su_st")
 	hand.pop(int(card_c))
 	hand_prce.pop(int(card_c))
@@ -176,24 +171,19 @@ def trainers():
 def card_effect_trash(event):
 	global tag, click_num, card_cx, tag_del, tag_save, trash_num, deck_card_choice
 	tag = [canvas.itemcget(obj, 'tags') for obj in canvas.find_overlapping(event.x,event.y,event.x,event.y)]
-	print(tag)
 	tag_del = tag[-2]
 	card_c = tag_del.replace('img', '')
-	print(tag_save)
-	print(tag[-2])
 	
 	if trash_num == 0:#カードを1枚捨てる
 		tag_save = tag[-2]
 		canvas.move(tag_save,0,-10)
 		trash_num = 1
 	elif not tag_save == tag[-2]:
-		print("hfurpe")
 		canvas.move(tag_save,0,10)
 		tag_save = tag[-2]
 		canvas.move(tag_save,0,-10)
 	elif tag[-2] == tag_save:
 		trash_card.insert(0,hand[int(card_c)])
-		print(trash_card)
 		hand.pop(int(card_c))
 		hand_prce.pop(int(card_c))
 		hand_sort()
@@ -245,7 +235,6 @@ def bench_Place_click(event):
 						canvas.unbind("<Motion>")
 						click_num = 0
 						hand_sort()
-						print(bench_pokemon_en_0)
 					elif len(bench_pokemon_en_0) > 0:
 						bench_pokemon_en_0_count = 160
 						count_len_0.clear()
@@ -281,7 +270,6 @@ def bench_Place_click(event):
 						canvas.unbind("<Motion>")
 						click_num = 0
 						hand_sort()
-						print(bench_pokemon_en_1)
 					elif len(bench_pokemon_en_1) > 0:
 						bench_pokemon_en_1_count = 261
 						count_len_1.clear()
@@ -317,7 +305,6 @@ def bench_Place_click(event):
 						canvas.unbind("<Motion>")
 						click_num = 0
 						hand_sort()
-						print(bench_pokemon_en_2)
 					elif len(bench_pokemon_en_2) > 0:
 						bench_pokemon_en_2_count = 362
 						count_len_2.clear()
@@ -353,7 +340,6 @@ def bench_Place_click(event):
 						canvas.unbind("<Motion>")
 						click_num = 0
 						hand_sort()
-						print(bench_pokemon_en_3)
 					elif len(bench_pokemon_en_3) > 0:
 						bench_pokemon_en_3_count = 463
 						count_len_3.clear()
@@ -389,7 +375,6 @@ def bench_Place_click(event):
 						canvas.unbind("<Motion>")
 						click_num = 0
 						hand_sort()
-						print(bench_pokemon_en_4)
 					elif len(bench_pokemon_en_4) > 0:
 						bench_pokemon_en_4_count = 564
 						count_len_4.clear()
@@ -454,7 +439,6 @@ def btn_click1():
 	for _ in range(7):
 		cardimage = Image.open("/Users/hw18a153/Desktop/pokemon_img/%s" % l[0])
 		hand_prce.insert(0,l[0])
-		print(hand_prce)
 		card = cardimage.resize((90, 125))
 		card = ImageTk.PhotoImage(card)
 		hand.insert(0,card)
@@ -493,7 +477,6 @@ def btn_click2():
 	print("カードを引く")
 	cardimage = Image.open("/Users/hw18a153/Desktop/pokemon_img/%s" % l[0])
 	hand_prce.insert(0,l[0])
-	print(hand_prce)
 	card = cardimage.resize((90, 125))
 	card = ImageTk.PhotoImage(card)
 	hand.insert(0,card)
@@ -558,14 +541,11 @@ def trash_check(event):
 	card_image_palcey = 40
 	counter_cou = 10
 	counter_cou_cou = 0
-	print(trash_card)
 	for trash_draw in range(len(trash_card)):
 		counter_cou_cou += 1
 		canvas3.create_image(card_image_palcex, card_image_palcey, image=trash_card[trash_draw], tag="img"+str(trash_draw)+"")
 		card_image_palcex += 53
-		print(trash_draw)
 		if counter_cou_cou == counter_cou:
-			print("njubfpivlfs")
 			card_image_palcey += 74
 			card_image_palcex = 30
 			counter_cou += 10
@@ -604,9 +584,7 @@ def deck_check():
 		counter_cou_cou += 1
 		canvas2.create_image(card_image_palcex, card_image_palcey, image=card_image_l[deck_draw], tag="img"+str(deck_draw)+"")
 		card_image_palcex += 53
-		print(deck_draw)
 		if counter_cou_cou == counter_cou:
-			print("njubfpivlfs")
 			card_image_palcey += 74
 			card_image_palcex = 30
 			counter_cou += 10
@@ -621,12 +599,8 @@ def deck_check_click(event):
 	global canvas2, deck_strage, deck_card_choice, card_image_l, btn4, card_image_trash, tags, card_full_name
 	tag = [canvas2.itemcget(obj, 'tags') for obj in canvas2.find_overlapping(event.x,event.y,event.x,event.y)]
 	tags = tag[0].replace('img', '').replace(' current', '')
-	print(card_image_l[int(tags)])
-	print(tags)
-	print(card_image_trash[int(tags)])
 	check_card_type = l[int(tags)].split('_')[0]
 	canvas2.delete("card_choi")
-	print(l[int(tags)])
 	canvas.tag_unbind("hand_place", "<ButtonPress-1>")
 	if int(tags) < 10:
 		x0 = 3 + 53 * int(tags)
