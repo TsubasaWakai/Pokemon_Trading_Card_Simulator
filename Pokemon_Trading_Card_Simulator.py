@@ -110,7 +110,7 @@ def active_place_click(event):
 			card_c = tag_del.replace('img', '')
 			if tag_en[-3] == "activ_pokemon":
 				if not types in active_pokemon_en:
-					energie_image = Image.open("/Users/hw18a153/Desktop/エネルギー/"+types+".png")
+					energie_image = Image.open("<ここに自分のパスを記入>/エネルギー/"+types+".png")
 					energie_image = energie_image.resize((20, 20))
 					energie_image = ImageTk.PhotoImage(energie_image)
 					canvas.create_image(active_pokemon_en_placex, 185, image=energie_image, tag=types + str(len(active_pokemon_en)))
@@ -134,7 +134,7 @@ def active_place_click(event):
 					hand_sort()
 					for typecount in active_pokemon_en:
 						encount = len(active_pokemon_en[typecount])
-						count = Image.open("/Users/hw18a153/Desktop/エネルギー/%s.png" % encount)
+						count = Image.open("<ここに自分のパスを記入>/エネルギー/%s.png" % encount)
 						count = count.resize((20, 20))
 						count = ImageTk.PhotoImage(count)
 						active_len.append(count)
@@ -224,7 +224,7 @@ def bench_Place_click(event):
 			
 				if tag_en[-3] == "bench_pokemon[0]":
 					if not types in bench_pokemon_en_0:
-						energie_image = Image.open("/Users/hw18a153/Desktop/エネルギー/"+types+".png")
+						energie_image = Image.open("<ここに自分のパスを記入>/エネルギー/"+types+".png")
 						energie_image = energie_image.resize((20, 20))
 						energie_image = ImageTk.PhotoImage(energie_image)
 						canvas.create_image(bench_pokemon_en_0_placex, 365, image=energie_image, tag=types + str(len(bench_pokemon_en_0)))
@@ -248,7 +248,7 @@ def bench_Place_click(event):
 						hand_sort()
 						for typecount in bench_pokemon_en_0:
 							encount = len(bench_pokemon_en_0[typecount])
-							count = Image.open("/Users/hw18a153/Desktop/エネルギー/%s.png" % encount)
+							count = Image.open("<ここに自分のパスを記入>/エネルギー/%s.png" % encount)
 							count = count.resize((20, 20))
 							count = ImageTk.PhotoImage(count)
 							count_len_0.append(count)
@@ -259,7 +259,7 @@ def bench_Place_click(event):
 								
 				elif tag_en[-3] == "bench_pokemon[1]":
 					if not types in bench_pokemon_en_1:
-						energie_image = Image.open("/Users/hw18a153/Desktop/エネルギー/"+types+".png")
+						energie_image = Image.open("<ここに自分のパスを記入>/エネルギー/"+types+".png")
 						energie_image = energie_image.resize((20, 20))
 						energie_image = ImageTk.PhotoImage(energie_image)
 						canvas.create_image(bench_pokemon_en_1_placex, 365, image=energie_image, tag=types + str(len(bench_pokemon_en_1)))
@@ -283,7 +283,7 @@ def bench_Place_click(event):
 						hand_sort()
 						for typecount in bench_pokemon_en_1:
 							encount = len(bench_pokemon_en_1[typecount])
-							count = Image.open("/Users/hw18a153/Desktop/エネルギー/%s.png" % encount)
+							count = Image.open("<ここに自分のパスを記入>/エネルギー/%s.png" % encount)
 							count = count.resize((20, 20))
 							count = ImageTk.PhotoImage(count)
 							count_len_1.append(count)
@@ -294,7 +294,7 @@ def bench_Place_click(event):
 							
 				elif tag_en[-3] == "bench_pokemon[2]":
 					if not types in bench_pokemon_en_2:
-						energie_image = Image.open("/Users/hw18a153/Desktop/エネルギー/"+types+".png")
+						energie_image = Image.open("<ここに自分のパスを記入>/エネルギー/"+types+".png")
 						energie_image = energie_image.resize((20, 20))
 						energie_image = ImageTk.PhotoImage(energie_image)
 						canvas.create_image(bench_pokemon_en_2_placex, 365, image=energie_image, tag=types + str(len(bench_pokemon_en_2)))
@@ -318,7 +318,7 @@ def bench_Place_click(event):
 						hand_sort()
 						for typecount in bench_pokemon_en_2:
 							encount = len(bench_pokemon_en_2[typecount])
-							count = Image.open("/Users/hw18a153/Desktop/エネルギー/%s.png" % encount)
+							count = Image.open("<ここに自分のパスを記入>/エネルギー/%s.png" % encount)
 							count = count.resize((20, 20))
 							count = ImageTk.PhotoImage(count)
 							count_len_2.append(count)
@@ -329,7 +329,7 @@ def bench_Place_click(event):
 					
 				elif tag_en[-3] == "bench_pokemon[3]":
 					if not types in bench_pokemon_en_3:
-						energie_image = Image.open("/Users/hw18a153/Desktop/エネルギー/"+types+".png")
+						energie_image = Image.open("<ここに自分のパスを記入>/エネルギー/"+types+".png")
 						energie_image = energie_image.resize((20, 20))
 						energie_image = ImageTk.PhotoImage(energie_image)
 						canvas.create_image(bench_pokemon_en_3_placex, 365, image=energie_image, tag=types + str(len(bench_pokemon_en_3)))
@@ -353,7 +353,7 @@ def bench_Place_click(event):
 						hand_sort()
 						for typecount in bench_pokemon_en_3:
 							encount = len(bench_pokemon_en_3[typecount])
-							count = Image.open("/Users/hw18a153/Desktop/エネルギー/%s.png" % encount)
+							count = Image.open("<ここに自分のパスを記入>/エネルギー/%s.png" % encount)
 							count = count.resize((20, 20))
 							count = ImageTk.PhotoImage(count)
 							count_len_3.append(count)
@@ -364,7 +364,7 @@ def bench_Place_click(event):
 			
 				elif tag_en[-3] == "bench_pokemon[4]":
 					if not types in bench_pokemon_en_4:
-						energie_image = Image.open("/Users/hw18a153/Desktop/エネルギー/"+types+".png")
+						energie_image = Image.open("<ここに自分のパスを記入>/エネルギー/"+types+".png")
 						energie_image = energie_image.resize((20, 20))
 						energie_image = ImageTk.PhotoImage(energie_image)
 						canvas.create_image(bench_pokemon_en_4_placex, 365, image=energie_image, tag=types + str(len(bench_pokemon_en_4)))
@@ -388,7 +388,7 @@ def bench_Place_click(event):
 						hand_sort()
 						for typecount in bench_pokemon_en_4:
 							encount = len(bench_pokemon_en_4[typecount])
-							count = Image.open("/Users/hw18a153/Desktop/エネルギー/%s.png" % encount)
+							count = Image.open("<ここに自分のパスを記入>/エネルギー/%s.png" % encount)
 							count = count.resize((20, 20))
 							count = ImageTk.PhotoImage(count)
 							count_len_4.append(count)
@@ -420,7 +420,7 @@ def hand_sort():
 def fast_side():
 	print("サイドを並べました。")
 	for _ in range(6):
-		cardimage = Image.open("/Users/hw18a153/Desktop/pokemon_img/%s" % l[0])
+		cardimage = Image.open("<ここに自分のパスを記入>/pokemon_img/%s" % l[0])
 		card = cardimage.resize((90, 125))
 		card = ImageTk.PhotoImage(card)
 		side.insert(0,card)
@@ -437,7 +437,7 @@ def btn_click1():
 	print("7枚引きました。")
 	btn1.config(state="disable")
 	for _ in range(7):
-		cardimage = Image.open("/Users/hw18a153/Desktop/pokemon_img/%s" % l[0])
+		cardimage = Image.open("<ここに自分のパスを記入>/pokemon_img/%s" % l[0])
 		hand_prce.insert(0,l[0])
 		card = cardimage.resize((90, 125))
 		card = ImageTk.PhotoImage(card)
@@ -475,7 +475,7 @@ def btn_click1():
 #カードを1枚引く
 def btn_click2():
 	print("カードを引く")
-	cardimage = Image.open("/Users/hw18a153/Desktop/pokemon_img/%s" % l[0])
+	cardimage = Image.open("<ここに自分のパスを記入>/pokemon_img/%s" % l[0])
 	hand_prce.insert(0,l[0])
 	card = cardimage.resize((90, 125))
 	card = ImageTk.PhotoImage(card)
@@ -575,7 +575,7 @@ def deck_check():
 	card_image_l = []
 	card_image_trash = []
 	for deck_strage in l:
-		card_image = Image.open("/Users/hw18a153/Desktop/pokemon_img/"+deck_strage+"")
+		card_image = Image.open("<ここに自分のパスを記入>/pokemon_img/"+deck_strage+"")
 		card_image_trash.append(card_image)
 		card_image = card_image.resize((52, 73))
 		card_image = ImageTk.PhotoImage(card_image,master = root3)
@@ -629,9 +629,9 @@ random.shuffle(l)
 root = tk.Tk()
 root.title(u"メイン画面")
 root.geometry("950x600")
-field = tk.PhotoImage(file="/Users/hw18a153/Desktop/pokemon_mandatory/field.png")
+field = tk.PhotoImage(file="<ここに自分のパスを記入>/pokemon_mandatory/field.png")
 
-card_ura_image = Image.open("/Users/hw18a153/Desktop/pokemon_mandatory/poke_ura.jpg")
+card_ura_image = Image.open("<ここに自分のパスを記入>/pokemon_mandatory/poke_ura.jpg")
 card_ura_image = card_ura_image.resize((90, 125))
 card_ura_image = ImageTk.PhotoImage(card_ura_image)
 
