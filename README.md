@@ -1,3 +1,5 @@
+# こちらのURLから起動している時の動作を確認できます。<br> https://drive.google.com/file/d/16ALxY_l7DFORe7rvQxg9TWw5AuiXT32o/view?usp=sharing
+
 # Pokemon_Trading_Card_Simulator
 Pythonでポケモンカードの一人回しが出来るようになるまで開発を進めます。現状できることは少ないです。
 
